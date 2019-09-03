@@ -8,27 +8,27 @@ import {
 
 export default  [
 	{
-		path: 'Todo',
+		path: 'todo',
 		service: createTodoService,
 		method: "POST",
 	},
 	{
-		path: 'Todo',
+		path: 'todo',
 		service: readAllTodoService,
 		method: "GET",
 	},
 	{
-		path: 'Todo/:id',
+		path: 'todo/:id',
 		service: readOneTodoService,
 		method: "GET",
 	},
 	{
-		path: 'Todo/:id',
+		path: 'todo/:id',
 		service: deleteTodoService,
 		method: "DELETE",
 	},
 	{
-		path: 'Todo/:id',
+		path: 'todo/:id',
 		service: updateTodoService,
 		method: "POST",
 	},
