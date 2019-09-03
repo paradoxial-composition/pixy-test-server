@@ -13,7 +13,8 @@ export default class createService extends Service {
 		
 		try {
 			 let _Todo = (new Todo).getInstance();
-			(new _Todo(this.req.body)).save((err, todo) => {
+			_Todo.update({ _id: this.req.body._id }, this.req.body, {upsert: true}, (err, todo) => {
+			// (new _Todo(this.req.body)).save((err, todo) => {
 				if (err) {
 					this.res.send(err)
 				} else {
