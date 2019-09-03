@@ -13,7 +13,7 @@ export default class updateService extends Service {
 
 		try {
 			let _Todo = (new Todo).getInstance();
-			_Todo.update({ _id: this.req.params.id }, this.req.body, (err, todo) => { // to Object_Id may be a future probleme
+			_Todo.update({ userId: this.req.body.userId }, this.req.body, (err, todo) => { // to Object_Id may be a future probleme
 				if (err) {
 					this.res.send(err)
 				} else {

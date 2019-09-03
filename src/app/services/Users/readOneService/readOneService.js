@@ -1,5 +1,5 @@
 import Service from '../../Service';
-import Todo from '~/app/models/Todo';
+import User from '~/app/models/User';
 
 // let axios = require('axios')
 
@@ -10,15 +10,14 @@ export default class readOneService extends Service {
 	}
 
 	async handle() {
-		console.log(this.req.params)
 		try {
-			let _Todo = (new Todo).getInstance();
-			_Todo.findOne({ _id: this.req.params.id }, (err, todo) => {
+			let _User = (new User).getInstance();
+			_User.findOne({ $and: [ {email: this.req.body.email}, {password: this.req.body.password} ] }, (err, user) => {
 				if (err) {
 					this.res.send(err)
 				} else {
 					return this.toJson({
-						todo
+						user
 					})
 				}
 			})

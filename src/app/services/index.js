@@ -4,11 +4,11 @@ import readAllTodoService from './Todo/readAllService';
 import readOneTodoService from './Todo/readOneService';
 import updateTodoService from './Todo/updateService';
 
-import loginService from './Users/loginService';
-import registerService from './Users/registerService';
-import allUsersService from './Users/allUsersService';
-import deleteUserService from './Users/deleteUserService';
-import updateUserService from './Users/updateUserService';
+import readOneUserService from './Users/readOneService';
+import createUserService from './Users/createService';
+import readAllUserService from './Users/readAllService';
+import deleteUserService from './Users/deleteService';
+import updateUserService from './Users/updateService';
 
 export {
 	createTodoService,
@@ -17,9 +17,9 @@ export {
 	readOneTodoService,
 	updateTodoService,
 	
-	loginService,
-	registerService,
-	allUsersService,
+	readOneUserService,
+	createUserService,
+	readAllUserService,
 	deleteUserService,
 	updateUserService,
 };

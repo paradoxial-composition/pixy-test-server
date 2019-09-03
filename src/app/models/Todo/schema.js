@@ -1,3 +1,4 @@
 export default {
-    name: String,
+    userId: String,
+    todoList: [],
 }

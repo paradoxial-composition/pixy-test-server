@@ -1,24 +1,23 @@
 import Service from '../../Service';
-import Todo from '~/app/models/Todo';
+import User from '~/app/models/User';
 
 // let axios = require('axios')
 
-export default class readOneService extends Service {
+export default class readAllService extends Service {
 
 	constructor({req, res}) {
 		super({req, res});
 	}
 
 	async handle() {
-		console.log(this.req.params)
 		try {
-			let _Todo = (new Todo).getInstance();
-			_Todo.findOne({ _id: this.req.params.id }, (err, todo) => {
+			let _User = (new User).getInstance();
+			_User.find((err, user) => {
 				if (err) {
 					this.res.send(err)
 				} else {
 					return this.toJson({
-						todo
+						user
 					})
 				}
 			})
@@ -27,5 +26,4 @@ export default class readOneService extends Service {
 			return this.end()
 		}
 	}
-
 }
