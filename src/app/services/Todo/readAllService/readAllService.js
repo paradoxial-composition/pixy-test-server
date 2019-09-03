@@ -1,25 +1,23 @@
-
 import Service from '../../Service';
-import Exemple from '~/app/models/Exemple';
+import Todo from '~/app/models/Todo';
 
 // let axios = require('axios')
 
-export default class deleteService extends Service {
+export default class readAllService extends Service {
 
 	constructor({req, res}) {
 		super({req, res});
 	}
 
 	async handle() {
-
 		try {
-			let _Exemple = (new Exemple).getInstance();
-			_Exemple.remove({ _id: this.req.params.id }, (err, exemple) => {
+			let _Todo = (new Todo).getInstance();
+			_Todo.find((err, todo) => {
 				if (err) {
 					this.res.send(err)
 				} else {
 					return this.toJson({
-						exemple
+						todo
 					})
 				}
 			})

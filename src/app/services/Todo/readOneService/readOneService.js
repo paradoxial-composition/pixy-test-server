@@ -1,21 +1,23 @@
 import Service from '../../Service';
-import Exemple from '~/app/models/Exemple';
+import Todo from '~/app/models/Todo';
 
-export default class createService extends Service {
-	
+// let axios = require('axios')
+
+export default class readOneService extends Service {
+
 	constructor({req, res}) {
 		super({req, res});
 	}
-	
+
 	async handle() {
 		try {
-			 let _Exemple = (new Exemple).getInstance();
-			(new _Exemple(this.req.body)).save((err, exemple) => {
+			let _Todo = (new Todo).getInstance();
+			_Todo.findOne({ _id: this.req.params.id }, (err, todo) => {
 				if (err) {
 					this.res.send(err)
 				} else {
 					return this.toJson({
-						exemple
+						todo
 					})
 				}
 			})
@@ -23,6 +25,6 @@ export default class createService extends Service {
 			console.log('data base error.')
 			return this.end()
 		}
-
 	}
+
 }

@@ -1,13 +1,13 @@
-import createExempleService from './Exemple/createService';
-import deleteExempleService from './Exemple/deleteService';
-import readAllExempleService from './Exemple/readAllService';
-import readOneExempleService from './Exemple/readOneService';
-import updateExempleService from './Exemple/updateService';
+import createTodoService from './Todo/createService';
+import deleteTodoService from './Todo/deleteService';
+import readAllTodoService from './Todo/readAllService';
+import readOneTodoService from './Todo/readOneService';
+import updateTodoService from './Todo/updateService';
 
 export {
-	createExempleService,
-	deleteExempleService,
-	readAllExempleService,
-	readOneExempleService,
-	updateExempleService
+	createTodoService,
+	deleteTodoService,
+	readAllTodoService,
+	readOneTodoService,
+	updateTodoService
 };
