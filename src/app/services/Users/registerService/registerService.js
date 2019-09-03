@@ -3,7 +3,7 @@ import User from '~/app/models/User';
 
 // let axios = require('axios')
 
-export default class loginService extends Service {
+export default class registerService extends Service {
 	
 	constructor({req, res}) {
 		super({req, res});
@@ -11,6 +11,7 @@ export default class loginService extends Service {
 	
 	async handle() {
 	//	instruction
+	console.log("sup brah.")
 	try {
 		let _User = (new User).getInstance();
 		(new _User(this.req.body)).save((err, user) => {
