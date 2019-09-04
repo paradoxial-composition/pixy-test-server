@@ -1,6 +1,6 @@
-# Express JS - starter KIT - Innoveos
+# Express JS - starter KIT
 
-MicroService Started KIT builded with Express JS for [@innoveos](https://github.com/innoveos)
+MicroService Started KIT builded with Express JS
 
 ## Features
 
@@ -9,9 +9,9 @@ MicroService Started KIT builded with Express JS for [@innoveos](https://github.
 - **`@`** refer to `ROOT_FOLDER/`
 - **`~`** refer to `ROOT_FOLDER/src/`
 
-You can import from `./src/app/models/Exemple` like : 
+You can import from `./src/app/models/Todo` like : 
 ```javascript
-import Exemple from '~/app/models/Exemple';
+import Todo from '~/app/models/Todo';
 ```
 The same if you need to import from root folder :
 ```javascript
@@ -57,13 +57,13 @@ _A CLI to Generate MicroServices with the following architecture :_
 
 You can config your database settings in ~/config/util/Env
 
-### CRUD Exemple
+### CRUD Todo
 
-You can find an already existing CRUD MicroServices setup for the 'Exemple' Model in ~/src/app/services/Exemple
+You can find an already existing CRUD MicroServices setup for the 'Todo' Model in ~/src/app/services/Todo
 
 ### Routing
 
-You can find a base CRUD routing for the 'Exemple' MicroServices in ~/src/routes/exemple-routes
+You can find a base CRUD routing for the 'Todo' MicroServices in ~/src/routes/Todo-routes
 
 ### Middleware
 
