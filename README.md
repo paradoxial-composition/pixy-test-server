@@ -1,6 +1,6 @@
-# Express JS - starter KIT - Innoveos
+# Express JS - starter KIT
 
-MicroService Started KIT builded with Express JS for [@innoveos](https://github.com/innoveos)
+MicroService Started KIT builded with Express JS
 
 ## Features
 

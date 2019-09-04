@@ -9,6 +9,7 @@ import {
 	readAllTodoService,
 	readOneTodoService,
 	updateTodoService,
+	readPaginateTodoService,
 
 	readOneUserService,
 	createUserService,
@@ -26,6 +27,10 @@ export default Router([
 	{
 		path: 'todo',
 		service: readAllTodoService,
+		method: "GET",
+	},{
+		path: 'todo/page:pagenum',
+		service: readPaginateTodoService,
 		method: "GET",
 	},
 	{
