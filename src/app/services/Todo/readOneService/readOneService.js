@@ -10,7 +10,6 @@ export default class readOneService extends Service {
 	}
 
 	async handle() {
-		console.log(this.req.params)
 		try {
 			let _Todo = (new Todo).getInstance();
 			_Todo.findOne({ _id: this.req.params.id }, (err, todo) => {

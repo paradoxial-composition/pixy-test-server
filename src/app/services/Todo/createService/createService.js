@@ -8,8 +8,6 @@ export default class createService extends Service {
 	}
 	
 	async handle() {
-		// this.req.body.todoList.push()
-		console.log(this.req.body)
 		
 		try {
 			 let _Todo = (new Todo).getInstance();
