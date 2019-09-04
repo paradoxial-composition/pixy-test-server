@@ -11,7 +11,6 @@ export default class registerService extends Service {
 	
 	async handle() {
 	//	instruction
-	console.log("sup brah.")
 	try {
 		let _User = (new User).getInstance();
 		(new _User(this.req.body)).save((err, user) => {
